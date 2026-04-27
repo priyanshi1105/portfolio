@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priyanshi Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f1a, #1c1c3c);
+  color: white;
+}
+
+/* HERO */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  background: #2a2a4a;
+  transition: 0.4s;
+  animation: float 3s ease-in-out infinite;
+}
+
+.social-icons a:hover {
+  transform: scale(1.3) rotate(8deg);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.figma:hover { background: #a259ff; }
+.instagram:hover { background: #e1306c; }
+.linkedin:hover { background: #0077b5; }
+.whatsapp:hover { background: #25d366; }
+
+/* PROJECTS */
+.projects-section {
+  padding: 80px 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1e1e3f;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card i {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #a259ff;
+}
+
+/* QR SECTION */
+.qr-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.qr-section img {
+  width: 220px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  .social-icons a {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="container">
+  <h1>Priyanshi Vaghela</h1>
+  <p>Flutter Developer | UI Designer</p>
+
+  <div class="social-icons">
+
+    <!-- Figma -->
+    <a href="#projects" class="figma">
+      <i class="fa-brands fa-figma"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/priyanshi_284/" target="_blank" class="instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/priyanshi-vaghela-a939b02b1" target="_blank" class="linkedin">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/917016365882" target="_blank" class="whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="projects-section">
+  <h2 style="text-align:center;">My Figma Projects</h2>
+  <p style="text-align:center;">Click to view</p>
+
+  <div class="projects">
+
+    <div class="card" onclick="openLink('https://www.figma.com/proto/h1CD4UnWKaIWVJQqHIERut')">
+      <i class="fa-brands fa-figma"></i>
+      <h3>Project 1</h3>
+    </div>
+
+    <div class="card" onclick="openLink('https://www.figma.com/proto/qg564IGprNSpCKDM2CDsgZ')">
+      <i class="fa-brands fa-figma"></i>
+      <h3>Project 2</h3>
+    </div>
+
+    <div class="card" onclick="openLink('https://www.figma.com/proto/jVQHGAovKJrAEVQdVY9vsv')">
+      <i class="fa-brands fa-figma"></i>
+      <h3>Project 3</h3>
+    </div>
+
+    <div class="card" onclick="openLink('https://www.figma.com/proto/G9yiJTotJLLz8GSUaDPrFY')">
+      <i class="fa-brands fa-figma"></i>
+      <h3>Project 4</h3>
+    </div>
+
+    <div class="card" onclick="openLink('https://www.figma.com/proto/Er6u85IIJ6K0k21zNGFScp')">
+      <i class="fa-brands fa-figma"></i>
+      <h3>Project 5</h3>
+    </div>
+
+  </div>
+</div>
+
+<!-- QR SECTION -->
+<div class="qr-section">
+  <h2>Scan to Follow on Instagram</h2>
+  <img src="/mnt/data/priyanshi_284_qr.png" alt="Instagram QR">
+</div>
+
+<script>
+function openLink(url) {
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
