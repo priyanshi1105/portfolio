@@ -1,233 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priyanshi Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Priyanshi Vaghela | Portfolio</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+    <link rel="stylesheet" href="style.css">
 
-html {
-  scroll-behavior: smooth;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-body {
-  background: linear-gradient(135deg, #0f0f1a, #1c1c3c);
-  color: white;
-}
-
-/* HERO */
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 1s ease-in-out;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #aaa;
-  margin-bottom: 40px;
-}
-
-/* SOCIAL ICONS */
-.social-icons {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.social-icons a {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: white;
-  text-decoration: none;
-  background: #2a2a4a;
-  transition: 0.4s;
-  animation: float 3s ease-in-out infinite;
-}
-
-.social-icons a:hover {
-  transform: scale(1.3) rotate(8deg);
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
-}
-
-.figma:hover { background: #a259ff; }
-.instagram:hover { background: #e1306c; }
-.linkedin:hover { background: #0077b5; }
-.whatsapp:hover { background: #25d366; }
-.github:hover { background: #333; }
-
-/* PROJECTS */
-.projects-section {
-  padding: 80px 20px;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #1e1e3f;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-.card i {
-  font-size: 35px;
-  margin-bottom: 10px;
-  color: #a259ff;
-}
-
-/* QR SECTION */
-.qr-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.qr-section img {
-  width: 220px;
-  border-radius: 15px;
-  margin-top: 20px;
-}
-
-/* Animations */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  .social-icons a {
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
-  }
-}
-</style>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
+<div class="progress-bar" id="progress-bar"></div>
 
-<!-- HERO -->
-<div class="container">
-  <h1>Priyanshi Vaghela</h1>
-  <p> UI/UX Designer</p>
+<div class="bg-circle one"></div>
+<div class="bg-circle two"></div>
+    <!--================ NAVBAR =================-->
 
-  <div class="social-icons">
+    <header>
 
-    <!-- Figma -->
-    <a href="#projects" class="figma">
-      <i class="fa-brands fa-figma"></i>
-    </a>
+        <nav>
 
-    <!-- GitHub ✅ NEW -->
-    <a href="https://github.com/priyanshi1105" target="_blank" class="github">
-      <i class="fa-brands fa-github"></i>
-    </a>
+            <div class="logo">
+                PV
+            </div>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/priyanshi_284/" target="_blank" class="instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
+            <ul>
 
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/priyanshi-vaghela-a939b02b1" target="_blank" class="linkedin">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
+                <li><a href="#home">Home</a></li>
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/917016365882" target="_blank" class="whatsapp">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
+                <li><a href="#about">About</a></li>
 
-  </div>
-</div>
+                <li><a href="#skills">Skills</a></li>
 
-<!-- PROJECTS -->
-<div id="projects" class="projects-section">
-  <h2 style="text-align:center;">My Figma Projects</h2>
-  <p style="text-align:center;">Click to view</p>
+                <li><a href="#projects">Projects</a></li>
 
-  <div class="projects">
+                <li><a href="#contact">Contact</a></li>
 
-    <div class="card" onclick="openLink('https://www.figma.com/proto/h1CD4UnWKaIWVJQqHIERut')">
-      <i class="fa-brands fa-figma"></i>
-      <h3>Project 1</h3>
-    </div>
+            </ul>
 
-    <div class="card" onclick="openLink('https://www.figma.com/proto/qg564IGprNSpCKDM2CDsgZ')">
-      <i class="fa-brands fa-figma"></i>
-      <h3>Project 2</h3>
-    </div>
+        </nav>
 
-    <div class="card" onclick="openLink('https://www.figma.com/proto/jVQHGAovKJrAEVQdVY9vsv')">
-      <i class="fa-brands fa-figma"></i>
-      <h3>Project 3</h3>
-    </div>
+    </header>
 
-    <div class="card" onclick="openLink('https://www.figma.com/proto/G9yiJTotJLLz8GSUaDPrFY')">
-      <i class="fa-brands fa-figma"></i>
-      <h3>Project 4</h3>
-    </div>
 
-    <div class="card" onclick="openLink('https://www.figma.com/proto/Er6u85IIJ6K0k21zNGFScp')">
-      <i class="fa-brands fa-figma"></i>
-      <h3>Project 5</h3>
-    </div>
 
-  </div>
-</div>
+    <!--================ HERO =================-->
 
-<!-- QR SECTION -->
-<div class="qr-section">
-  <h2>Scan to View My Portfolio</h2>
-  <img src="qr.png" alt="Portfolio QR">
-</div>
+    <section class="hero" id="home">
 
-<script>
-function openLink(url) {
-  window.open(url, "_blank");
-}
-</script>
+        <div class="hero-left">
+
+            <p class="hello">Hello, I'm</p>
+
+            <h1>
+
+                Priyanshi
+                <span>Vaghela</span>
+
+            </h1>
+
+            <h2>
+
+                UI/UX Designer
+
+                <span>|</span>
+
+                Garaphic Designer
+
+                
+            </h2>
+
+            <p class="description">
+
+                I design beautiful user experiences and build
+                modern Flutter applications with clean UI,
+                smooth interactions and responsive layouts.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn">
+
+                    View Projects
+
+                </a>
+
+                <a href="#contact" class="btn2">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-right">
+
+            <div class="profile-card">
+
+                <img src= "pfImg.jpeg"alt="Profile">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--================ ABOUT =================-->
+
+    <section class="about" id="about">
+
+        <h2 class="title">
+
+            About Me
+
+        </h2>
+
+        <div class="about-card">
+
+            <p>
+
+                I'm Priyanshi Vaghela, a passionate UI/UX Designer
+                and Graphic Designer.
+
+                I enjoy creating beautiful interfaces,
+                mobile applications UI designs,
+                and modern digital experiences.
+
+            </p>
+
+            <div class="about-boxes">
+
+                <div>
+
+                    <h3>10+</h3>
+
+                    <p>Projects</p>
+
+                </div>
+
+                <div>
+
+                    <h3>3</h3>
+
+                    <p>Years Learning</p>
+
+                </div>
+
+                <div>
+
+                    <h3>100%</h3>
+
+                    <p>Creative</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--================ SKILLS =================-->
+
+    <section id="skills">
+
+        <h2 class="title">
+
+            Skills
+
+        </h2>
+
+        <div class="skills">
+
+        
+
+            <div class="skill">Figma</div>
+
+            <div class="skill">UI Design</div>
+
+            <div class="skill">UX Research</div>
+
+            <div class="skill">Canva</div>
+
+            <div class="skill">Photoshop</div>
+
+            <div class="skill">Illustrator</div>
+
+            <div class="skill">HTML</div>
+
+            <div class="skill">CSS</div>
+
+            <div class="skill">JavaScript</div>
+
+            <div class="skill">Responsive Design</div>
+
+            
+
+        </div>
+
+    </section>
+
+
+
+    <!--================ PROJECTS =================-->
+
+    <section id="projects">
+
+        <h2 class="title">
+
+            Featured Projects
+
+        </h2>
+
+        <div class="project-grid">
+
+
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h3>Project-1 [E-hub]</h3>
+
+                <p>Modern Mobile App UI</p>
+
+                <button onclick="openLink('https://www.figma.com/proto/h1CD4UnWKaIWVJQqHIERut')">
+
+                    View Project
+
+                </button>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h3>Project-2 [Angry Bird Game]</h3>
+
+                <p>UI/UX Case Study</p>
+
+                <button onclick="openLink('https://www.figma.com/proto/qg564IGprNSpCKDM2CDsgZ')">
+
+                    View Project
+
+                </button>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h3>Project-3[Space Game]</h3>
+
+                <p>Space Shooting Game</p>
+
+                <button onclick="openLink('https://www.figma.com/proto/jVQHGAovKJrAEVQdVY9vsv')">
+
+                    View Project
+
+                </button>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h3>Project-4 [Theater Photobooth]</h3>
+
+                <p>Theater Photobooth Software</p>
+
+                <button onclick="openLink('https://www.figma.com/proto/G9yiJTotJLLz8GSUaDPrFY')">
+
+                    View Project
+
+                </button>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h3>Project-5 [Website Design]</h3>
+
+                <p>Morden Music school Website Design</p>
+
+                <button onclick="openLink('https://www.figma.com/proto/Er6u85IIJ6K0k21zNGFScp')">
+
+                    View Project
+
+                </button>
+
+            </div>
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h3>Project-6 [wireframe]</h3>
+
+                <p>wireframing and prototyping of e-commerce website </p>
+
+                <button onclick="openLink('https://www.figma.com/proto/KMsdW9tfLN4IKeAcNFoVB3/project-2-decodelab?node-id=0-1')">
+
+                    View Project
+
+                </button>
+                </div>
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-Canva"></i>
+
+                <h3>Project-7 [Fitness App UX]</h3>
+
+                <p>UX Slides for fitness App </p>
+
+                <button onclick="openLink('https://canva.link/ylhufnwgs7x0xrn')">
+
+                    View Project
+
+                </button>
+                </div>
+        </div>
+
+    </section>
+
+
+
+    <!--================ CONTACT =================-->
+
+    <section id="contact">
+
+        <h2 class="title">
+
+            Let's Connect
+
+        </h2>
+
+        <div class="contact-box">
+
+            <a href="https://www.linkedin.com/in/priyanshi-vaghela-a939b02b1" target="_blank">
+
+                <i class="fab fa-linkedin"></i>
+
+            </a>
+
+            <a href="https://www.instagram.com/priyanshi_284/" target="_blank">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+            <a href="https://wa.me/917016365882" target="_blank">
+
+                <i class="fab fa-whatsapp"></i>
+
+            </a>
+            <a href="https://github.com/priyanshi1105" target="_blank">
+
+                <i class="fab fa-github"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!--================ FOOTER =================-->
+
+    <footer>
+
+        <h3>
+
+            Priyanshi Vaghela
+
+        </h3>
+
+        <p>
+
+            UI/UX Designer • Graphic Designer
+
+        </p>
+
+        <p>
+
+            © 2026 All Rights Reserved
+
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
